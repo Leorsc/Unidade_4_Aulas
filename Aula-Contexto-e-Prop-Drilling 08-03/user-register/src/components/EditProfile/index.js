@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import useUser from '../../hooks/useUser';
 import './styles.css';
+import UserContext from "../../contexts/UserContext.js";
 
 function EditProfile() {
-  const { setName, setAge } = useUser()
+  const { setName, setAge } = useUser(UserContext)
   const [localName, setLocalName] = useState('')
   const [localAge, setLocalAge] = useState('')
 
